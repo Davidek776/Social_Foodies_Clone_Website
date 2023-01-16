@@ -1,0 +1,37 @@
+body {
+  font-family: "Heebo", sans-serif;
+}
+
+// * {
+//   &:before,
+//   &:after {
+//     content: " ";
+//     display: table;
+//   }
+//   &:after {
+//     clear: both;
+//   }
+// }
+
+.button {
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: $header-color;
+  background: darken($header-color, 70%);
+  //   background: red;
+  padding: 1em 3em;
+  position: relative;
+  top: 2em;
+  border: none;
+  font-weight: bold;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+h1 {
+  font-family: "Plakkaat", sans-serif;
+}

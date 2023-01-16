@@ -1,0 +1,223 @@
+main {
+  & .pre-main {
+    margin-left: 20%;
+    margin-top: 7em;
+    width: 50%;
+    & h1 {
+      font-size: 3.5em;
+    }
+  }
+
+  & .chokolade {
+    display: flex;
+    align-items: center;
+
+    margin-top: 10em;
+    margin-left: 24%;
+    & .left {
+      background: $cake-color2;
+      width: 28%;
+
+      color: darken($cake-color2, 52%);
+      display: flex;
+
+      // height: 30em;
+      position: absolute;
+      left: 5%;
+
+      & article {
+        padding-bottom: 30%;
+      }
+
+      & h1 {
+        font-size: 3em;
+        padding: 0 8%;
+      }
+
+      & .button {
+        background: darken($cake-color2, 55%);
+        padding: 1em 1.5em;
+        font-weight: bold;
+        margin: 0 5%;
+      }
+
+      & p {
+        padding: 0 8%;
+      }
+    }
+
+    & .right {
+      & img {
+        width: 70vw;
+      }
+    }
+  }
+
+  & .chokolade2 {
+    background: $main-div-color;
+    color: darken($main-div-color, 65%);
+    padding-top: 5%;
+    padding-bottom: 8%;
+    margin-top: 5em;
+
+    display: flex;
+    & img {
+      width: 60vw;
+      position: relative;
+      right: 20%;
+    }
+
+    & .button {
+      background: darken($main-div-color, 65%);
+      color: $main-div-color;
+      font-weight: bold;
+    }
+
+    & h1 {
+      font-size: 3.5em;
+    }
+    & .right {
+      width: 20%;
+    }
+  }
+
+  & .chips {
+    background: $main-div-color2;
+    display: flex;
+    color: darken($main-div-color2, 47%);
+    padding-bottom: 5em;
+
+    & img {
+      padding-top: 5em;
+      margin-left: 30%;
+      width: 35vw;
+    }
+    & h1 {
+      font-size: 3.5em;
+    }
+
+    & .right {
+      margin-left: 15%;
+      padding-top: 5em;
+      width: 35%;
+
+      & .button {
+        background: darken($main-div-color2, 47%);
+        color: $main-div-color2;
+      }
+    }
+  }
+
+  & .nuts {
+    display: flex;
+    background: $main-div-color3;
+    color: darken($main-div-color3, 50%);
+    & .left {
+      padding: 3% 0 8% 18%;
+
+      width: 30%;
+    }
+
+    & h1 {
+      font-size: 3em;
+    }
+    & .right {
+      margin-left: 5%;
+    }
+
+    & img {
+      width: 35vw;
+      padding-top: 5em;
+    }
+
+    & .button {
+      background: darken($main-div-color3, 50%);
+    }
+  }
+
+  & .store {
+    margin-top: 5em;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 6%;
+    // width: 100%;
+
+    // text-align: center;
+  }
+
+  $k: 1;
+  $x: 0;
+  @for $i from 1 through 8 {
+    .item-#{$i} {
+      position: relative;
+      width: 29vw;
+      height: 30em;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      @if $k!=9 {
+        background: nth($store-colors, $k);
+      }
+
+      padding-bottom: 5em;
+
+      & h1 {
+        margin: 0;
+      }
+
+      & .button {
+        top: 1em;
+        @if $k!=9 {
+          // background: darken(nth($store-colors, $j + $x), 55%);
+        }
+      }
+
+      & img {
+        position: absolute;
+        top: 0;
+        margin-top: 3em;
+        width: 16em;
+      }
+      $k: $k + 1;
+      @if $i==2 or $i==4 {
+        & img {
+          width: 6em;
+        }
+      }
+
+      @if $i==5 {
+        & img {
+          width: 7em;
+        }
+      }
+      @if $i==3 or $i==7 {
+        & img {
+          width: 11em;
+        }
+      }
+
+      @if $i==8 {
+        & img {
+          width: 10em;
+        }
+      }
+
+      @if $i==1 {
+        & img {
+          margin-top: 6em;
+        }
+      }
+    }
+  }
+}
+
+// @for $j from 0   to 2 {
+//   .col-#{$j} {
+//     height: 25vh;
+//     background: #bada55;
+//     border: 5px solid #fff;
+//   }
+// }
