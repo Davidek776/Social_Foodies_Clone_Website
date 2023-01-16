@@ -9,7 +9,7 @@ The result is landing website which from my point of view looks very simmilar, m
 <h3>My clone website is published <a href="https://davidek776.github.io/Vela_Clone_Website/">here</a></h3>
 
 <img 
-     src="img/Vela1.png"
+     src="img/SocialFoodies1.png"
      alt="Grapefruit slice atop a pile of other slices">
      
 
